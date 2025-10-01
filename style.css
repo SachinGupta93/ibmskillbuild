@@ -957,15 +957,16 @@ canvas {
 /* ===== Final override: keep app small and fixed above 1000px ===== */
 @media (min-width: 1000px) {
   .weather-app {
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+    position: relative;
+    top: auto;
+    left: auto;
+    transform: none;
     z-index: 20;
     width: min(92vw, 720px);
     max-width: 720px;
     padding: 28px;
     border-radius: 22px;
+    margin: 40px auto; /* keep it centered in document flow */
   }
   /* Keep typography compact regardless of larger breakpoints above */
   .app-title { font-size: 22px; margin-bottom: 14px; }
