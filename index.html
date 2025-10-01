@@ -1,0 +1,95 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Enhanced Weather Dashboard</title>
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Ccircle cx='32' cy='32' r='14' fill='%23FFD54F'/%3E%3Cg stroke='%23FFB300' stroke-width='4' stroke-linecap='round'%3E%3Cline x1='32' y1='4' x2='32' y2='16'/%3E%3Cline x1='32' y1='48' x2='32' y2='60'/%3E%3Cline x1='4' y1='32' x2='16' y2='32'/%3E%3Cline x1='48' y1='32' x2='60' y2='32'/%3E%3Cline x1='11' y1='11' x2='19' y2='19'/%3E%3Cline x1='45' y1='45' x2='53' y2='53'/%3E%3Cline x1='11' y1='53' x2='19' y2='45'/%3E%3Cline x1='45' y1='19' x2='53' y2='11'/%3E%3C/g%3E%3C/svg%3E" />
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <canvas id="weather-canvas"></canvas>
+  
+  <div class="weather-container">
+    <div class="weather-app">
+      <div class="app-title">Weather in India</div>
+      <div class="search-section">
+        <div class="search-label">Select your location</div>
+        <select class="state-select" id="state-select" aria-label="Select state">
+          <option value="">Select State</option>
+          <option value="Andhra Pradesh">Andhra Pradesh</option>
+          <option value="Arunachal Pradesh">Arunachal Pradesh</option>
+          <option value="Assam">Assam</option>
+          <option value="Bihar">Bihar</option>
+          <option value="Chhattisgarh">Chhattisgarh</option>
+          <option value="Goa">Goa</option>
+          <option value="Gujarat">Gujarat</option>
+          <option value="Haryana">Haryana</option>
+          <option value="Himachal Pradesh">Himachal Pradesh</option>
+          <option value="Jharkhand">Jharkhand</option>
+          <option value="Karnataka">Karnataka</option>
+          <option value="Kerala">Kerala</option>
+          <option value="Madhya Pradesh">Madhya Pradesh</option>
+          <option value="Maharashtra">Maharashtra</option>
+          <option value="Manipur">Manipur</option>
+          <option value="Meghalaya">Meghalaya</option>
+          <option value="Mizoram">Mizoram</option>
+          <option value="Nagaland">Nagaland</option>
+          <option value="Odisha">Odisha</option>
+          <option value="Punjab">Punjab</option>
+          <option value="Rajasthan">Rajasthan</option>
+          <option value="Sikkim">Sikkim</option>
+          <option value="Tamil Nadu">Tamil Nadu</option>
+          <option value="Telangana">Telangana</option>
+          <option value="Tripura">Tripura</option>
+          <option value="Uttar Pradesh">Uttar Pradesh</option>
+          <option value="Uttarakhand">Uttarakhand</option>
+          <option value="West Bengal">West Bengal</option>
+        </select>
+        <select class="city-select" id="city-select" aria-label="Select city" disabled>
+          <option value="">Select City</option>
+        </select>
+        <button class="search-btn" onclick="performSearch()" aria-label="Search weather">Search</button>
+      </div>
+      
+      <div class="current-weather">
+        <div class="location-name" id="location">Detecting location...</div>
+        <div class="main-temp" id="temperature">--°C</div>
+        <div class="weather-desc" id="description">Loading...</div>
+      </div>
+      
+      <div class="weather-details">
+        <div class="detail-card">
+          <div class="detail-label">Humidity</div>
+          <div class="detail-value" id="humidity">--%</div>
+        </div>
+        <div class="detail-card">
+          <div class="detail-label">Wind Speed</div>
+          <div class="detail-value" id="wind">-- km/h</div>
+        </div>
+        <div class="detail-card">
+          <div class="detail-label">Feels Like</div>
+          <div class="detail-value" id="feels-like">--°C</div>
+        </div>
+        <div class="detail-card">
+          <div class="detail-label">Visibility</div>
+          <div class="detail-value" id="visibility">-- km</div>
+        </div>
+      </div>
+      
+      <div class="time-controls">
+        <button class="control-btn" id="past-btn">Past 7 Days</button>
+        <button class="control-btn active" id="next-btn">Next 7 Days</button>
+      </div>
+      
+      <div class="forecast-section">
+        <h3>7-Day Forecast</h3>
+        <div class="forecast-grid" id="forecast"></div>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js" defer></script>
+</body>
+</html>
