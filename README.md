@@ -176,6 +176,38 @@ This is a static site; any static hosting works:
 - Font: Inter by Rasmus Andersson & The Inter Project
 
 
+## References & Inspiration
+
+Official docs
+- Open‑Meteo general docs: https://open-meteo.com/en/docs
+- Geocoding API: https://open-meteo.com/en/docs/geocoding-api
+- Historical Weather (Archive) API: https://open-meteo.com/en/docs/historical-weather-api
+- MDN – Canvas API tutorial: https://developer.mozilla.org/en-US/docs/Web/API/Canvas_API/Tutorial
+- MDN – requestAnimationFrame: https://developer.mozilla.org/en-US/docs/Web/API/window/requestAnimationFrame
+- MDN – Geolocation API: https://developer.mozilla.org/en-US/docs/Web/API/Geolocation_API
+- MDN – CSS clamp(): https://developer.mozilla.org/en-US/docs/Web/CSS/clamp
+
+Icon resources
+- Icons8 Weather icons: https://icons8.com/icons/set/weather
+
+Example projects (for ideas; many use other weather APIs but the UI/UX patterns apply)
+- Traversy Media – WeatherJS (vanilla JS + OpenWeatherMap): https://github.com/bradtraversy/weatherjs
+- GitHub search – “open‑meteo weather app”: https://github.com/search?q=open-meteo+weather+app&type=repositories
+- GitHub search – “vanilla js weather app”: https://github.com/search?q=vanilla+js+weather+app&type=repositories
+- CodePen tag – weather UIs and effects: https://codepen.io/tag/weather/
+- CodePen search – canvas rain/thunder effects: https://codepen.io/search/pens?q=canvas%20rain
+
+
+## Conclusion
+
+- **Real-time Weather Intelligence**: Delivers instant, location-based weather data with geolocation integration and manual city selection for accurate forecasting.
+- **Interactive Visual Experience**: Features dynamic canvas animations that mirror actual weather conditions with stars, clouds, rain, snow, and lightning effects.
+- **Responsive Design Excellence**: Optimized for all devices from mobile to desktop with adaptive layouts and touch-friendly interfaces.
+- **Zero-Cost Implementation**: Built with vanilla JavaScript and free APIs (Open-Meteo), requiring no API keys or subscription fees for deployment.
+- **Easy Deployment Ready**: Static site architecture enables instant hosting on GitHub Pages, Netlify, or Vercel with drag-and-drop simplicity.
+- **Enhanced User Experience**: Provides 7-day forecasts, past weather data, and intuitive navigation to support travel planning and daily weather decisions.
+
+
 ## License
 
 No license has been specified. If you plan to publicly distribute this project, consider adding a `LICENSE` file (MIT, Apache‑2.0, etc.).

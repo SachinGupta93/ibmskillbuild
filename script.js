@@ -539,7 +539,7 @@
         ctx.restore();
       });
       
-      lightningFlash -= 0.08;
+      lightningFlash -= 0.09;
       if (lightningFlash < 0) {
         lightningFlash = 0;
         lightningBolts = [];
